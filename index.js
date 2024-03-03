@@ -20,7 +20,7 @@ mbServer.use(router)
 mbServer.use('/uploads',express.static('./uploads'))
 
 //host the server
-const PORT=3000
+const PORT=3000 || process.env.PORT
 //to host mbServer :localhost:3000
 mbServer.listen(PORT,()=>{
     console.log(`Movie Booking Server Started at port:${PORT}`);
